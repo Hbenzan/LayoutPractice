@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -73,7 +74,7 @@ import java.awt.event.WindowEvent;
                 }
             });
             controlPanel = new JPanel();
-            controlPanel.setLayout(new GridLayout(2,3)); //set the layout of the panel
+            controlPanel.setLayout(new BorderLayout(2,3)); //set the layout of the panel
 //
             mainFrame.add(controlPanel);
 //            mainFrame.add(statusLabel);
@@ -86,9 +87,14 @@ import java.awt.event.WindowEvent;
             JButton submitButton = new JButton("Submit");
             JButton cancelButton = new JButton("Cancel");
             JButton helpButton = new JButton("help");
-            JButton coolButton = new JButton("CoolButton");
+//            JButton coolButton = new JButton("CoolButton");
             JButton benzButton = new JButton("benzButton");
             JButton downButton = new JButton("downButton");
+            JButton apButton = new JButton("apButton");
+            JButton chloeButton = new JButton("chloeButton");
+            JButton fionaButton = new JButton("fionaButton");
+            JButton claireButton = new JButton("claireButton");
+
 
 
             okButton.setActionCommand("OK");
@@ -99,20 +105,25 @@ import java.awt.event.WindowEvent;
             submitButton.addActionListener(new ButtonClickListener());
             cancelButton.addActionListener(new ButtonClickListener());
 
-            controlPanel.add(okButton);
+//            controlPanel.add(okButton);
 //            controlPanel.add(statusLabel);
-            controlPanel.add(cancelButton);
-//            controlPanel.add(statusLabel1);
-            controlPanel.add(helpButton);
-            controlPanel.add(benzButton);
+//            controlPanel.add(cancelButton);
+////            controlPanel.add(statusLabel1);
+//            controlPanel.add(helpButton);
+//            controlPanel.add(benzButton);
 
 
 
-//            mainFrame.add(okButton,BorderLayout.EAST);
-//            mainFrame.add(submitButton, BorderLayout.WEST);
-            mainFrame.add(benzButton, BorderLayout.SOUTH);
-////            mainFrame.add(helpButton, BorderLayout.SOUTH);
-            mainFrame.add(downButton, BorderLayout.NORTH);
+            mainFrame.add(okButton);
+            mainFrame.add(submitButton);
+            mainFrame.add(benzButton);
+            mainFrame.add(helpButton);
+            mainFrame.add(statusLabel);
+            mainFrame.add(downButton);
+            mainFrame.add(apButton);
+            mainFrame.add(chloeButton);
+            mainFrame.add(fionaButton);
+            mainFrame.add(claireButton);
 
 
             mainFrame.setVisible(true);
